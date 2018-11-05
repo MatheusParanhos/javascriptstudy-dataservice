@@ -1,0 +1,22 @@
+{
+  "name": "javascript-data-service",
+  "version": "1.0.0",
+  "description": "javascript study for a data service",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "lite-server"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "es6-module-loader": "^0.17.11",
+    "jquery": "^3.3.1",
+    "material-design-lite": "^1.3.0",
+    "systemjs": "^2.1.1",
+    "traceur": "0.0.111"
+  },
+  "devDependencies": {
+    "lite-server": "^2.4.0"
+  }
+}
