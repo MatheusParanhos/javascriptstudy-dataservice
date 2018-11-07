@@ -141,10 +141,11 @@ export class FleetDataService {
   filterCarByMake(input){
     return this.cars.filter(car => car.make.indexOf(input) >= 0)
   }
+  filterCarsByMin(input){
+    return this.cars.filter(car => car.miles > input)
+  }
   filterDroneByModel(input){
     return this.drones.filter(drone => drone.model.indexOf(input) >= 0);
   }
-  // filterBoatByMinPower(input){
-  //   return this.boats.filter(boat => boat.power.)
-  // }
+
 }

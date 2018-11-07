@@ -8,9 +8,11 @@ let dataService = new FleetDataService();
 //console.log(fleet)
 dataService.loadFleet(fleet)
 
-for (let car of dataService.cars)
-console.log(car.license
-)
+// for (let car of dataService.cars)
+// console.log(car.license
+// )
 
-for (let drone of dataService.drones)
-console.log(drone)
+// for (let drone of dataService.drones)
+// console.log(drone)
+//console.log(dataService.filterCarByMake('e'))
+console.log(dataService.filterCarsByMin(5300))

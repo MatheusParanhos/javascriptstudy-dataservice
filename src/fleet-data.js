@@ -28,7 +28,7 @@ export let fleet = [
         type: 'car',
         make: 'Tesla',
         model: 'Quick Transport',
-        miles: '15600',
+        miles: 15600,
         latLong: '40.773272 -73.968875'
     },
     {
@@ -36,7 +36,7 @@ export let fleet = [
         type: 'car',
         make: 'Uber',
         model: 'Auto Taxi Plus',
-        miles: '400',
+        miles: 400,
         latLong: '40.778878 -73.968435'
     },
     {
@@ -44,7 +44,7 @@ export let fleet = [
         type: 'car',
         make: 'Uber',
         model: 'Zip Trip',
-        miles: '12200',
+        miles: 12200,
         latLong: '40.778984 -73.962266'
     },
     {
@@ -52,7 +52,7 @@ export let fleet = [
         type: 'car',
         make: 'Lyft',
         model: 'Pick U Up',
-        miles: '400',
+        miles: 400,
         latLong: '40.774036 -73.967319'
     },
     {
@@ -60,7 +60,7 @@ export let fleet = [
         type: 'boat',
         model: 'Pick U left',
         motor: true,
-        power: '3134',
+        power: 20,
         latLong: '48.774036 -13.967319'
     },
     {
@@ -68,7 +68,7 @@ export let fleet = [
         type: 'boat',
         model: 'Pick U right',
         motor: false,
-        power: '14',
+        power: 300,
         latLong: '43.774036 -53.967319'
     },
     {
@@ -76,7 +76,7 @@ export let fleet = [
         type: 'boat',
         model: 'Pick U down',
         motor: true,
-        power: '4334',
+        power: 500,
         latLong: '54.774036 -56.967319'
     },
     {
