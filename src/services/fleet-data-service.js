@@ -11,6 +11,7 @@ export class FleetDataService {
     this.errors = [];
     this.boats = [];
     this.airplanes = [];
+    this.events = {};
   }
   loadFleet(fleet) {
     for (let data of fleet) {
@@ -129,23 +130,82 @@ export class FleetDataService {
     return !hasErrors;
   }
   validateDroneData(drone) {
-    let hasErrors = false
-    for (let field in drone){
-      if (!drone[field]){
-       this.errors.push(new DataError(`error with field: ${field}`))
-       hasErrors = true
+    let hasErrors = false;
+    for (let field in drone) {
+      if (!drone[field]) {
+        this.errors.push(new DataError(`error with field: ${field}`));
+        hasErrors = true;
       }
     }
-    return !hasErrors
+    return !hasErrors;
   }
-  filterCarByMake(input){
-    return this.cars.filter(car => car.make.indexOf(input) >= 0)
+  filterCarByMake(input) {
+    return this.cars.filter(car => car.make.indexOf(input) >= 0);
   }
-  filterCarsByMin(input){
-    return this.cars.filter(car => car.miles > input)
+  filterCarsByMin(input) {
+    return this.cars.filter(car => car.miles > input);
   }
-  filterDroneByModel(input){
+  filterDroneByModel(input) {
     return this.drones.filter(drone => drone.model.indexOf(input) >= 0);
   }
-
+  addEvent(event, handler) {
+    this.events[event].push(handler);
+  }
+  onEvent(event, data) {
+    event[handler].forEach(function() {
+      handler(data);
+    });
+  }
+  offEvent(event, handler) {
+    for (let i = 1; i++; i < this.events.length - 1) {
+      if (this.events[event][i] === handler) {
+        this.events[event].splice(i, 1);
+      }
+    }
+  }
+  addAnotherEvent(event, handler) {
+    this.events[event].push(handler);
+  }
+  onAnotherEvent(event, data) {
+    this.events[event].forEach(function() {
+      handler(data);
+    });
+  }
+  offAnotherEvent(event, handler) {
+    for (let i = 0; i++; i < this.events[events].length - 1) {
+      this.events[events][1] === handler
+        ? this.events[event].slice(i, 1)
+        : null;
+    }
+  }
+  addEvent(event, handler) {
+    this.events[event].push(handler);
+  }
+  onEvent(event, data) {
+    this.events[event].forEach(function() {
+      handler(data);
+    });
+  }
+  offEvent(event, handler) {
+    for (let i = 0; i < this.events[event].length - 1; i++) {
+      this.event[events][i] === handler
+        ? this.event[events].splice(i, 1)
+        : undefined;
+    }
+  }
+  addEvent(event, handler) {
+    this.events[event].push(handler);
+  }
+  onEvent(event, data) {
+    this.events[event].forEach(function() {
+      handler(data);
+    });
+  }
+  offEvent(event, handler) {
+    for (let i = 0; i < this.events[event].length - 1; i++) {
+      this.event[events][i] === handler
+        ? this.event[events].splice(i, 1)
+        : undefined;
+    }
+  }
 }
